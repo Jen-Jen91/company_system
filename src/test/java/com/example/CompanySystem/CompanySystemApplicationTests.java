@@ -42,7 +42,7 @@ public class CompanySystemApplicationTests {
 
 	@Test
 	public void addEmployeesAndProjects() {
-		Department department = new Department("IT");
+		Department department = new Department("HR");
 		departmentRepository.save(department);
 
 		Employee employee = new Employee("Monica", "Mateiu", 2, department);
