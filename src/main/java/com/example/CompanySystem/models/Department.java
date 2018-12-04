@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "departments")
@@ -18,7 +19,7 @@ public class Department {
 
     @JsonIgnore
     @OneToMany(mappedBy = "department")
-    private ArrayList<Employee> employees;
+    private List<Employee> employees;
 
     public Department(String name) {
         this.name = name;
@@ -37,7 +38,7 @@ public class Department {
         return this.name;
     }
 
-    public ArrayList<Employee> getEmployees() {
+    public List<Employee> getEmployees() {
         return this.employees;
     }
 
@@ -49,7 +50,7 @@ public class Department {
         this.name = name;
     }
 
-    public void setEmployees(ArrayList<Employee> employees) {
+    public void setEmployees(List<Employee> employees) {
         this.employees = employees;
     }
 

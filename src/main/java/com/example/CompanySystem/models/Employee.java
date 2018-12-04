@@ -28,7 +28,7 @@ public class Employee {
         this.employeeNumber = employeeNumber;
         this.department = department;
     }
-    
+
     public Employee(){
 
     }
